@@ -1,0 +1,1525 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto BARF Neiva | Ingeniería Agroindustrial - USCO</title>
+    <meta name="description" content="Formulación y evaluación de un proyecto de inversión para la producción y comercialización de alimento BARF congelado para perros y gatos en Neiva, Huila.">
+    
+    <!-- Tipografías Google Fonts: Plus Jakarta Sans (Títulos) e Inter (Cuerpo) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Iconos Phosphor Icons (Limpios y corporativos) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Barra de progreso de lectura superior -->
+    <div class="reading-progress-container">
+        <div class="reading-progress-bar" id="readingProgressBar"></div>
+    </div>
+
+    <!-- Navegación Fija -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#portada" class="brand">
+                <span class="brand-icon"><i class="ph-fill ph-paw-print"></i></span>
+                <div class="brand-text">
+                    <span class="brand-title">BARF AGRO-NEIVA</span>
+                    <span class="brand-sub">USCO · Ing. Agroindustrial</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="#introduccion" class="nav-link">Introducción</a></li>
+                    <li><a href="#problema" class="nav-link">Problema</a></li>
+                    <li><a href="#mercado" class="nav-link">Justificación</a></li>
+                    <li><a href="#objetivos" class="nav-link">Objetivos</a></li>
+                    <li><a href="#producto" class="nav-link">Producto BARF</a></li>
+                    <li><a href="#comparativa" class="nav-link">Comparativa</a></li>
+                    <li><a href="#proceso" class="nav-link">Proceso & Equipos</a></li>
+                    <li><a href="#cronograma" class="nav-link">Cronograma</a></li>
+                    <li><a href="#viabilidad" class="nav-link">Viabilidad</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="btn-presentation" id="btnPresentationMode" title="Activar Modo Presentación (Pantalla Completa)">
+                    <i class="ph ph-presentation-chart"></i>
+                    <span>Modo Exposición</span>
+                </button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                    <i class="ph ph-list"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Controles flotantes del Modo Presentación -->
+    <div class="presentation-hud" id="presentationHud" aria-hidden="true">
+        <div class="hud-info">
+            <span class="hud-badge">MODO PRESENTACIÓN</span>
+            <span id="hudSlideTitle">1. Portada</span>
+            <span class="hud-counter" id="hudCounter">1 / 16</span>
+        </div>
+        <div class="hud-controls">
+            <button id="hudPrev" title="Sección anterior (Flecha Izquierda / Arriba)"><i class="ph ph-caret-left"></i></button>
+            <button id="hudNext" title="Siguiente sección (Flecha Derecha / Abajo)"><i class="ph ph-caret-right"></i></button>
+            <button id="hudExit" class="btn-hud-exit" title="Salir del modo presentación (ESC)"><i class="ph ph-x"></i> Salir</button>
+        </div>
+    </div>
+
+    <main id="mainContent">
+
+        <!-- SECCIÓN 1: PORTADA HERO -->
+        <section id="portada" class="hero-section presentation-slide" data-title="1. Portada del Proyecto">
+            <div class="hero-bg-overlay"></div>
+            <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1920&q=80" alt="Perro y gato saludables en entorno natural" class="hero-bg-img">
+            
+            <div class="container hero-content">
+                <div class="hero-badges reveal">
+                    <span class="badge-institutional"><i class="ph-fill ph-graduation-cap"></i> Universidad Surcolombiana · Facultad de Ingeniería</span>
+                    <span class="badge-location"><i class="ph-fill ph-map-pin"></i> Neiva, Huila · Noviembre de 2026</span>
+                </div>
+
+                <h1 class="hero-title reveal">
+                    Formulación y evaluación de un proyecto de inversión para la producción y comercialización de alimento BARF congelado para perros y gatos en Neiva, Huila
+                </h1>
+
+                <p class="hero-slogan reveal">
+                    “Nutrición natural, formulación responsable y bienestar para las mascotas”
+                </p>
+
+                <div class="hero-meta-grid reveal">
+                    <div class="meta-item">
+                        <span class="meta-label">Programa Académico</span>
+                        <span class="meta-value">Ingeniería Agroindustrial · Reto de Innovación</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Estudiante Autor</span>
+                        <span class="meta-value">Andrés Suárez Ortega (Cód. 20252239965)</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Docente Asesor</span>
+                        <span class="meta-value">Estanislao Rojas Barrera</span>
+                    </div>
+                </div>
+
+                <div class="hero-cta reveal">
+                    <a href="#introduccion" class="btn-primary">
+                        <span>Conocer el proyecto</span>
+                        <i class="ph ph-arrow-down"></i>
+                    </a>
+                    <a href="#producto" class="btn-secondary-light">
+                        <span>Explorar Propuesta BARF</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: INTRODUCCIÓN Y SECTOR -->
+        <section id="introduccion" class="section bg-light presentation-slide" data-title="2. Introducción y Enfoque Agroindustrial">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Contexto y Propósito</span>
+                    <h2 class="section-title">Evolución nutricional y oportunidad agroindustrial en Neiva</h2>
+                    <p class="section-subtitle">
+                        Transformación de materias primas pecuarias regionales en una alternativa segura, balanceada y conveniente para el bienestar animal.
+                    </p>
+                </div>
+
+                <div class="intro-grid">
+                    <div class="intro-text-col reveal">
+                        <div class="info-block">
+                            <h3><i class="ph-duotone ph-trend-up"></i> Cambio en la alimentación de mascotas</h3>
+                            <p>
+                                La relación entre los tutores y sus animales de compañía ha evolucionado significativamente en los últimos años: cada vez más hogares buscan opciones de alimentación más naturales para sus perros y gatos, impulsando el dinamismo del sector en Colombia.
+                            </p>
+                        </div>
+
+                        <div class="info-block">
+                            <h3><i class="ph-duotone ph-bone"></i> ¿Qué significa BARF?</h3>
+                            <p>
+                                <strong>BARF</strong> (<em>Biologically Appropriate Raw Food</em> o alimento crudo biológicamente apropiado) es una dieta fundamentada en <strong>carne magra, huesos carnosos, vísceras y vegetales crudos</strong>, diseñada para respetar la biología y alimentación ancestral de perros y gatos.
+                            </p>
+                        </div>
+
+                        <div class="info-block highlight-box">
+                            <h3><i class="ph-duotone ph-flask"></i> Hipótesis e intervención de la Ingeniería Agroindustrial</h3>
+                            <p>
+                                En Neiva (Huila) se plantea como <strong>hipótesis por validar en el estudio de mercado</strong> que los tutores interesados en dietas crudas enfrentan una oferta local escasa o informal, viéndose obligados a preparar el alimento en casa o adquirirlo en otras ciudades. El proyecto aplica ingeniería de procesos para garantizar <strong>formulación técnica, inocuidad, empaque al vacío y cadena de frío</strong>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="intro-visual-col reveal">
+                        <div class="sector-card">
+                            <div class="sector-img-wrap">
+                                <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=800&q=80" alt="Perro saludable" loading="lazy">
+                                <span class="img-caption">Articulación de la cadena agroindustrial</span>
+                            </div>
+                            <div class="sector-body">
+                                <h4>Ubicación Sectorial del Proyecto</h4>
+                                <ul class="sector-list">
+                                    <li>
+                                        <span class="sector-badge primary">Sector Primario (Insumos)</span>
+                                        <p>Abastecimiento regional de carne, huesos carnosos, vísceras y vegetales frescos.</p>
+                                    </li>
+                                    <li>
+                                        <span class="sector-badge secondary">Sector Secundario (Principal)</span>
+                                        <p>Transformación agroindustrial: molienda, formulación balanceada, porcionado, empaque al vacío y congelación.</p>
+                                    </li>
+                                    <li>
+                                        <span class="sector-badge tertiary">Sector Terciario (Servicios)</span>
+                                        <p>Distribución refrigerada/congelada, comercialización en canales especializados y suscripción a domicilio en Neiva.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: PROBLEMA IDENTIFICADO (ÁRBOL INTERACTIVO) -->
+        <section id="problema" class="section bg-white presentation-slide" data-title="3. Identificación del Problema">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Diagnóstico Preliminar</span>
+                    <h2 class="section-title">Árbol de Problemas: Acceso al Alimento BARF en Neiva</h2>
+                    <p class="section-subtitle">
+                        Interactúa con los niveles del árbol para analizar las causas estructurales y los efectos sanitarios y comerciales identificados como hipótesis de partida.
+                    </p>
+                </div>
+
+                <!-- Filtros interactivos del árbol -->
+                <div class="tree-controls reveal">
+                    <button class="tree-filter active" data-filter="all">Vista Completa</button>
+                    <button class="tree-filter" data-filter="efectos">Ver Efectos (Copa)</button>
+                    <button class="tree-filter" data-filter="central">Problema Central (Tronco)</button>
+                    <button class="tree-filter" data-filter="causas">Ver Causas (Raíces)</button>
+                </div>
+
+                <div class="problem-tree-wrapper reveal" id="problemTree">
+                    <!-- NIVEL SUPERIOR: EFECTOS -->
+                    <div class="tree-level level-efectos" data-group="efectos">
+                        <div class="level-label">
+                            <i class="ph-bold ph-arrow-up-right"></i> EFECTOS / CONSECUENCIAS
+                        </div>
+                        <div class="tree-cards-grid three-cols">
+                            <div class="tree-card effect-card">
+                                <div class="tree-card-icon"><i class="ph-duotone ph-scales"></i></div>
+                                <h4>Desbalance nutricional casero</h4>
+                                <p>Dietas crudas preparadas en el hogar sin asesoría técnica, con deficiencias o excesos de calcio, fósforo, vitaminas y aminoácidos esenciales.</p>
+                            </div>
+                            <div class="tree-card effect-card">
+                                <div class="tree-card-icon"><i class="ph-duotone ph-biohazard"></i></div>
+                                <h4>Riesgo sanitario en el hogar</h4>
+                                <p>Manipulación inadecuada de carnes crudas y fallas en la congelación que exponen a mascotas y personas del hogar a patógenos.</p>
+                            </div>
+                            <div class="tree-card effect-card">
+                                <div class="tree-card-icon"><i class="ph-duotone ph-truck"></i></div>
+                                <h4>Demanda insatisfecha o externa</h4>
+                                <p>Tutores sin opciones confiables en Neiva o dependientes de envíos desde otras ciudades con sobrecostos y riesgo de ruptura de frío.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CONECTOR VISUAL -->
+                    <div class="tree-connector" data-group="central">
+                        <div class="connector-line"></div>
+                        <span class="connector-badge">Genera</span>
+                    </div>
+
+                    <!-- NIVEL CENTRAL: PROBLEMA CENTRAL -->
+                    <div class="tree-level level-central" data-group="central">
+                        <div class="central-problem-box">
+                            <span class="central-tag">PROBLEMA CENTRAL (HIPÓTESIS A VALIDAR)</span>
+                            <h3>“Los propietarios de perros y gatos en Neiva tienen acceso limitado a alimento BARF formulado, inocuo y de fácil adquisición”</h3>
+                            <p class="customer-need">
+                                <strong>Necesidad del cliente potencial:</strong> Contar con un alimento crudo ya formulado, seguro y práctico que evite la preparación doméstica y brinde respaldo nutricional y sanitario.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- CONECTOR VISUAL -->
+                    <div class="tree-connector" data-group="causas">
+                        <span class="connector-badge">Originado por</span>
+                        <div class="connector-line"></div>
+                    </div>
+
+                    <!-- NIVEL INFERIOR: CAUSAS -->
+                    <div class="tree-level level-causas" data-group="causas">
+                        <div class="level-label">
+                            <i class="ph-bold ph-tree-structure"></i> CAUSAS ESTRUCTURALES
+                        </div>
+                        <div class="tree-cards-grid two-cols">
+                            <div class="tree-card cause-card">
+                                <div class="tree-card-icon"><i class="ph-duotone ph-storefront"></i></div>
+                                <h4>Oferta local escasa o informal</h4>
+                                <p>Limitada presencia en Neiva de productores agroindustriales formalizados que apliquen Buenas Prácticas de Manufactura (BPM) y estandarización en dietas BARF.</p>
+                            </div>
+                            <div class="tree-card cause-card">
+                                <div class="tree-card-icon"><i class="ph-duotone ph-package"></i></div>
+                                <h4>Alta dependencia de concentrados industriales</h4>
+                                <p>Predominio comercial de alimentos ultraprocesados secos debido a su facilidad de almacenamiento, frente a la ausencia de alternativas naturales congeladas y listas para servir.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: JUSTIFICACIÓN Y OPORTUNIDAD DE MERCADO -->
+        <section id="mercado" class="section bg-green-dark text-white presentation-slide" data-title="4. Justificación y Cifras del Mercado">
+            <div class="container">
+                <div class="section-header light reveal">
+                    <span class="section-tag tag-light">Contexto Macroeconómico y Tendencias</span>
+                    <h2 class="section-title">Justificación y Oportunidad del Sector Mascotas</h2>
+                    <p class="section-subtitle">
+                        El crecimiento sostenido de los hogares multiespecie en Colombia respalda la exploración de productos naturales de mayor valor agregado en el Huila.
+                    </p>
+                </div>
+
+                <!-- Tarjetas KPI estadísticas del documento -->
+                <div class="stats-grid reveal">
+                    <div class="stat-card">
+                        <div class="stat-top">
+                            <i class="ph-duotone ph-house-line"></i>
+                            <span class="stat-source">DANE / Vivienda.com.co, 2025</span>
+                        </div>
+                        <div class="stat-number">67 %</div>
+                        <div class="stat-title">Hogares con mascotas</div>
+                        <p class="stat-desc">De los hogares colombianos convive con al menos una mascota en el hogar.</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-top">
+                            <i class="ph-duotone ph-users-three"></i>
+                            <span class="stat-source">Vivienda.com.co, 2025</span>
+                        </div>
+                        <div class="stat-number">4,4 M</div>
+                        <div class="stat-title">Hogares aproximadamente</div>
+                        <p class="stat-desc">Base nacional de familias que integran animales de compañía en su presupuesto.</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-top">
+                            <i class="ph-duotone ph-dog"></i>
+                            <span class="stat-source">Cambio Colombia, s. f.</span>
+                        </div>
+                        <div class="stat-number">65 %</div>
+                        <div class="stat-title">Tenencia de perros</div>
+                        <p class="stat-desc">Porcentaje de hogares con mascotas que cuentan con presencia canina.</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-top">
+                            <i class="ph-duotone ph-cat"></i>
+                            <span class="stat-source">Cambio Colombia, s. f. / Kantar, 2024</span>
+                        </div>
+                        <div class="stat-number">43 %</div>
+                        <div class="stat-title">Tenencia de gatos</div>
+                        <p class="stat-desc">Más de la mitad de los hogares con mascotas convive con ambas especies (multipet).</p>
+                    </div>
+
+                    <div class="stat-card stat-highlight">
+                        <div class="stat-top">
+                            <i class="ph-duotone ph-chart-line-up"></i>
+                            <span class="stat-source">Publimetro, 2026a / El Colombiano, 2025</span>
+                        </div>
+                        <div class="stat-number">USD 1.270 M</div>
+                        <div class="stat-title">Mercado colombiano (2025)</div>
+                        <p class="stat-desc">Valor estimado del mercado de alimentos para mascotas en 2025 (gasto total proyectado en $6,1 billones COP en 2026).</p>
+                    </div>
+                </div>
+
+                <!-- Nota metodológica obligatoria -->
+                <div class="method-disclaimer reveal">
+                    <i class="ph-fill ph-info"></i>
+                    <div>
+                        <strong>Nota Metodológica y Alcance de los Datos:</strong> Las cifras estadísticas presentadas corresponden al <strong>contexto nacional colombiano</strong> (fuentes secundarias citadas) y evidencian el dinamismo del sector. <strong>No corresponden a un estudio de mercado específico de Neiva</strong>; la cuantificación de la demanda local, frecuencia de compra y disposición de pago se determinará mediante encuesta propia y datos del DANE durante la ejecución del proyecto.
+                    </div>
+                </div>
+
+                <!-- Pilares de oportunidad -->
+                <div class="opportunity-pillars reveal">
+                    <div class="pillar-item">
+                        <h4><i class="ph-bold ph-leaf"></i> Nicho natural en expansión</h4>
+                        <p>Aunque los concentrados siguen liderando el mercado masivo (Publimetro, 2025), la alimentación natural crece como segmento especializado; en EE. UU. entre 15 % y 20 % de tutores incorpora alimento crudo (Publimetro, 2026b).</p>
+                    </div>
+                    <div class="pillar-item">
+                        <h4><i class="ph-bold ph-package"></i> Fragmentación de formatos</h4>
+                        <p>Los hábitos de compra evolucionan hacia presentaciones pequeñas que se ajustan mejor al flujo de caja del hogar (Portafolio, s. f.), favoreciendo porciones congeladas.</p>
+                    </div>
+                    <div class="pillar-item">
+                        <h4><i class="ph-bold ph-factory"></i> Aprovechamiento agroindustrial</h4>
+                        <p>Posibilidad de aprovechar materias primas pecuarias y subproductos cárnicos del Huila, cuya disponibilidad y costos se validarán en el estudio técnico.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 5: OBJETIVOS DEL PROYECTO -->
+        <section id="objetivos" class="section bg-light presentation-slide" data-title="5. Objetivos del Proyecto">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Hoja de Ruta Académica y Técnica</span>
+                    <h2 class="section-title">Objetivos del Proyecto de Inversión</h2>
+                    <p class="section-subtitle">
+                        Estructura metodológica para determinar la factibilidad integral de la iniciativa agroindustrial en Neiva.
+                    </p>
+                </div>
+
+                <!-- Objetivo General -->
+                <div class="general-objective-card reveal">
+                    <div class="obj-gen-badge">
+                        <i class="ph-fill ph-target"></i>
+                        <span>OBJETIVO GENERAL</span>
+                    </div>
+                    <h3>
+                        Formular y evaluar la viabilidad de mercado, técnica, legal y financiera de un proyecto de inversión para la producción y comercialización de alimento BARF congelado para perros y gatos en Neiva, Huila.
+                    </h3>
+                </div>
+
+                <!-- 4 Objetivos Específicos exactos del documento -->
+                <div class="specific-objectives-grid reveal">
+                    <div class="spec-obj-card">
+                        <div class="spec-num">01</div>
+                        <div class="spec-icon"><i class="ph-duotone ph-users-four"></i></div>
+                        <h4>Caracterización de Demanda y Oferta</h4>
+                        <p>Caracterizar la demanda potencial, los hábitos de alimentación y la disposición de pago de los tutores de perros y gatos en Neiva, así como la oferta competidora.</p>
+                    </div>
+
+                    <div class="spec-obj-card">
+                        <div class="spec-num">02</div>
+                        <div class="spec-icon"><i class="ph-duotone ph-gear-six"></i></div>
+                        <h4>Ingeniería y Estudio Técnico</h4>
+                        <p>Definir las formulaciones, el proceso productivo, la capacidad de planta, la localización y los requerimientos de equipos, inocuidad y cadena de frío.</p>
+                    </div>
+
+                    <div class="spec-obj-card">
+                        <div class="spec-num">03</div>
+                        <div class="spec-icon"><i class="ph-duotone ph-scales"></i></div>
+                        <h4>Marco Legal, Administrativo y Ambiental</h4>
+                        <p>Identificar los requisitos legales, administrativos y ambientales para producir y vender alimento para animales.</p>
+                    </div>
+
+                    <div class="spec-obj-card">
+                        <div class="spec-num">04</div>
+                        <div class="spec-icon"><i class="ph-duotone ph-storefront"></i></div>
+                        <h4>Estrategia Comercial y Estudio de Mercado</h4>
+                        <p>Formular un estudio de mercado que estime la demanda, el precio de venta y los canales de comercialización del alimento BARF congelado para perros y gatos en Neiva.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 6: EL PRODUCTO - ALIMENTO BARF -->
+        <section id="producto" class="section bg-white presentation-slide" data-title="6. El Producto: Alimento BARF">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Diseño Conceptual del Bien</span>
+                    <h2 class="section-title">Alimento BARF Congelado, Porcionado y Empacado al Vacío</h2>
+                    <p class="section-subtitle">
+                        Formulación biológicamente apropiada para perros y gatos, diseñada bajo criterios agroindustriales de conservación e inocuidad.
+                    </p>
+                </div>
+
+                <!-- Composición visual: 4 grupos de ingredientes -->
+                <h3 class="subsection-heading reveal"><i class="ph-duotone ph-circles-four"></i> Composición Base de la Dieta BARF</h3>
+                <div class="ingredients-grid reveal">
+                    <div class="ingredient-card">
+                        <div class="ing-img-box">
+                            <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=600&q=80" alt="Carne magra fresca" loading="lazy">
+                            <span class="ing-tag">Proteína Principal</span>
+                        </div>
+                        <div class="ing-content">
+                            <h4>1. Carne Magra</h4>
+                            <p>Fuente esencial de aminoácidos de alto valor biológico, energía y palatabilidad natural para carnívoros facultativos (perros) y estrictos (gatos).</p>
+                        </div>
+                    </div>
+
+                    <div class="ingredient-card">
+                        <div class="ing-img-box">
+                            <img src="https://images.unsplash.com/photo-1587593810167-a84920ea0781?auto=format&fit=crop&w=600&q=80" alt="Cortes avícolas y huesos carnosos" loading="lazy">
+                            <span class="ing-tag">Minerales Naturales</span>
+                        </div>
+                        <div class="ing-content">
+                            <h4>2. Huesos Carnosos</h4>
+                            <p>Aporte equilibrado de calcio, fósforo, colágeno y minerales biodisponibles, triturados adecuadamente para una digestión segura.</p>
+                        </div>
+                    </div>
+
+                    <div class="ingredient-card">
+                        <div class="ing-img-box">
+                            <img src="https://images.unsplash.com/photo-1551028150-64b9f398f678?auto=format&fit=crop&w=600&q=80" alt="Subproductos cárnicos y vísceras" loading="lazy">
+                            <span class="ing-tag">Micronutrientes</span>
+                        </div>
+                        <div class="ing-content">
+                            <h4>3. Vísceras</h4>
+                            <p>Órganos ricos en vitaminas liposolubles (A, D, E), complejo B, hierro y taurina, aprovechando subproductos pecuarios regionales.</p>
+                        </div>
+                    </div>
+
+                    <div class="ingredient-card">
+                        <div class="ing-img-box">
+                            <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80" alt="Vegetales frescos seleccionados" loading="lazy">
+                            <span class="ing-tag">Fibra y Antioxidantes</span>
+                        </div>
+                        <div class="ing-content">
+                            <h4>4. Vegetales</h4>
+                            <p>Aporte controlado de fibra dietética, fitonutrientes y antioxidantes naturales procesados para facilitar su asimilación digestiva.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Especificaciones del Producto + Mockup Conceptual de Empaque -->
+                <div class="product-showcase-grid reveal">
+                    <div class="product-specs-col">
+                        <h3>Atributos y Personalización del Producto</h3>
+                        <p class="specs-intro">
+                            El producto se concibe para eliminar la complejidad de la preparación casera, adaptándose a las necesidades fisiológicas de cada mascota:
+                        </p>
+
+                        <div class="specs-badges-grid">
+                            <div class="spec-pill">
+                                <i class="ph-fill ph-snowflake"></i>
+                                <div>
+                                    <strong>Alimento Congelado</strong>
+                                    <span>Conservación sin conservantes químicos</span>
+                                </div>
+                            </div>
+                            <div class="spec-pill">
+                                <i class="ph-fill ph-scales"></i>
+                                <div>
+                                    <strong>Porcionado Exacto</strong>
+                                    <span>Raciones listas para descongelar y servir</span>
+                                </div>
+                            </div>
+                            <div class="spec-pill">
+                                <i class="ph-fill ph-seal-check"></i>
+                                <div>
+                                    <strong>Empacado al Vacío</strong>
+                                    <span>Protección contra oxidación y contaminación</span>
+                                </div>
+                            </div>
+                            <div class="spec-pill">
+                                <i class="ph-fill ph-paw-print"></i>
+                                <div>
+                                    <strong>Formulado por Especie</strong>
+                                    <span>Fórmulas diferenciadas para perros y gatos</span>
+                                </div>
+                            </div>
+                            <div class="spec-pill">
+                                <i class="ph-fill ph-heartbeat"></i>
+                                <div>
+                                    <strong>Etapa de Vida</strong>
+                                    <span>Cachorro, adulto y senior</span>
+                                </div>
+                            </div>
+                            <div class="spec-pill">
+                                <i class="ph-fill ph-ruler"></i>
+                                <div>
+                                    <strong>Tamaño y Presentación</strong>
+                                    <span>Adaptado a tamaño; formatos pequeños y medianos</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="delivery-banner">
+                            <i class="ph-duotone ph-moped"></i>
+                            <div>
+                                <strong>Modelo de Suscripción y Entrega Congelada:</strong> Posibilidad de planes periódicos con distribución directa a domicilio en Neiva manteniendo la cadena de frío.
+                            </div>
+                        </div>
+
+                        <p class="validation-note">
+                            * Nota: Los supuestos sobre recetas específicas, gramajes de presentaciones y precios de venta son preliminares y se definirán en el estudio técnico y de mercado.
+                        </p>
+                    </div>
+
+                    <!-- Mockup Conceptual de Empaque Premium -->
+                    <div class="packaging-mockup-col">
+                        <div class="mockup-wrapper">
+                            <div class="mockup-disclaimer-ribbon">PROPUESTA CONCEPTUAL DE DISEÑO · MARCA ILUSTRATIVA</div>
+                            
+                            <div class="vacuum-pouch">
+                                <div class="pouch-seal-top"></div>
+                                <div class="pouch-label">
+                                    <div class="pouch-brand">
+                                        <i class="ph-fill ph-leaf"></i>
+                                        <span>HUILA BARF<small>®</small></span>
+                                    </div>
+                                    <span class="pouch-subtitle">NUTRICIÓN CRUDA BIOLOGICAMENTE APROPIADA</span>
+                                    
+                                    <div class="pouch-species-selector" id="pouchToggle">
+                                        <button class="pouch-tab active" data-species="perro">Fórmula Perros</button>
+                                        <button class="pouch-tab" data-species="gato">Fórmula Gatos</button>
+                                    </div>
+
+                                    <div class="pouch-dynamic-info" id="pouchDynamicInfo">
+                                        <div class="pouch-formula-title">Receta Adulto · Razas Pequeñas y Medianas</div>
+                                        <ul class="pouch-ingredients-list">
+                                            <li><i class="ph-bold ph-check"></i> Carne magra y huesos carnosos triturados</li>
+                                            <li><i class="ph-bold ph-check"></i> Vísceras seleccionadas y vegetales frescos</li>
+                                            <li><i class="ph-bold ph-check"></i> Formulación supervisada por profesional</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="pouch-footer-icons">
+                                        <span><i class="ph-bold ph-snowflake"></i> Mantener Congelado</span>
+                                        <span><i class="ph-bold ph-shield-check"></i> Empaque al Vacío</span>
+                                        <span><i class="ph-bold ph-map-pin"></i> Neiva, Huila</span>
+                                    </div>
+                                </div>
+                                <div class="pouch-texture-window">
+                                    <span>Ventana de visualización del producto porcionado</span>
+                                </div>
+                            </div>
+                            <p class="mockup-caption">
+                                Representación gráfica conceptual del empaque al vacío porcionado. La identidad comercial definitiva y el rotulado se ajustarán a la normativa del ICA.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 7: VENTAJAS COMPETITIVAS -->
+        <section id="ventajas" class="section bg-light presentation-slide" data-title="7. Ventajas Competitivas">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Propuesta de Valor</span>
+                    <h2 class="section-title">Cinco Ventajas Competitivas del Modelo Propuesto</h2>
+                    <p class="section-subtitle">
+                        Diferenciación basada en rigor técnico agroindustrial, seguridad sanitaria y cercanía regional.
+                    </p>
+                </div>
+
+                <div class="advantages-grid reveal">
+                    <div class="adv-card">
+                        <div class="adv-header">
+                            <span class="adv-num">01</span>
+                            <div class="adv-icon"><i class="ph-duotone ph-stethoscope"></i></div>
+                        </div>
+                        <h3>Formulación Profesional</h3>
+                        <p>Recetas nutricionalmente balanceadas por especie, edad y tamaño con asesoría de un médico veterinario o zootecnista, eliminando el riesgo de deficiencias.</p>
+                    </div>
+
+                    <div class="adv-card">
+                        <div class="adv-header">
+                            <span class="adv-num">02</span>
+                            <div class="adv-icon"><i class="ph-duotone ph-shield-plus"></i></div>
+                        </div>
+                        <h3>Inocuidad Garantizada</h3>
+                        <p>Implementación de Buenas Prácticas de Manufactura (BPM), controles microbiológicos periódicos, empaque al vacío y congelación controlada.</p>
+                    </div>
+
+                    <div class="adv-card">
+                        <div class="adv-header">
+                            <span class="adv-num">03</span>
+                            <div class="adv-icon"><i class="ph-duotone ph-clock-countdown"></i></div>
+                        </div>
+                        <h3>Máxima Conveniencia</h3>
+                        <p>Porciones individuales listas para descongelar y servir, evitando al tutor el tiempo de comprar, picar, pesar y balancear ingredientes en casa.</p>
+                    </div>
+
+                    <div class="adv-card">
+                        <div class="adv-header">
+                            <span class="adv-num">04</span>
+                            <div class="adv-icon"><i class="ph-duotone ph-map-pin-line"></i></div>
+                        </div>
+                        <h3>Cercanía y Frescura</h3>
+                        <p>Producción local en Neiva con materias primas regionales frescas, trazabilidad de lotes y reducción de tiempos y costos de transporte interdepartamental.</p>
+                    </div>
+
+                    <div class="adv-card adv-card-wide">
+                        <div class="adv-header">
+                            <span class="adv-num">05</span>
+                            <div class="adv-icon"><i class="ph-duotone ph-recycle"></i></div>
+                        </div>
+                        <h3>Valor Agregado Regional</h3>
+                        <p>Aprovechamiento eficiente de subproductos cárnicos de la cadena pecuaria del Huila, impulsando la economía circular y la transformación agroindustrial local.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 8: COMPARACIÓN CON ALTERNATIVAS DEL MERCADO -->
+        <section id="comparativa" class="section bg-white presentation-slide" data-title="8. Comparación con Alternativas">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Posicionamiento Competitivo</span>
+                    <h2 class="section-title">Comparación Preliminar frente a Alternativas del Mercado</h2>
+                    <p class="section-subtitle">
+                        Evaluación cualitativa de los criterios clave para el tutor entre el concentrado tradicional, la dieta cruda casera y la propuesta agroindustrial.
+                    </p>
+                </div>
+
+                <div class="table-responsive reveal">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th class="col-criterio">Criterio de Evaluación</th>
+                                <th class="col-alt">
+                                    <div class="th-wrap">
+                                        <i class="ph-duotone ph-package"></i>
+                                        <span>Concentrado Industrial</span>
+                                    </div>
+                                </th>
+                                <th class="col-alt">
+                                    <div class="th-wrap">
+                                        <i class="ph-duotone ph-cooking-pot"></i>
+                                        <span>BARF Casero</span>
+                                    </div>
+                                </th>
+                                <th class="col-propuesta">
+                                    <div class="th-wrap">
+                                        <span class="badge-propuesta">PROPUESTA</span>
+                                        <i class="ph-fill ph-check-circle"></i>
+                                        <span>BARF Formulado</span>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="criterio-cell">
+                                    <strong>Balance nutricional</strong>
+                                </td>
+                                <td>Formulado industrialmente por etapa de vida.</td>
+                                <td>Depende del conocimiento del tutor.</td>
+                                <td class="highlight-col">
+                                    <strong>Formulado por etapa de vida, tamaño y especie, con asesoría profesional.</strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="criterio-cell">
+                                    <strong>Inocuidad</strong>
+                                </td>
+                                <td>Procesado térmicamente.</td>
+                                <td>Manejo doméstico variable.</td>
+                                <td class="highlight-col">
+                                    <strong>BPM, control microbiológico, congelación y empaque al vacío.</strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="criterio-cell">
+                                    <strong>Conveniencia</strong>
+                                </td>
+                                <td>Alta; almacenamiento sencillo.</td>
+                                <td>Baja; exige compra, preparación y porcionado.</td>
+                                <td class="highlight-col">
+                                    <strong>Alta; porciones listas, congeladas y con entrega a domicilio.</strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="criterio-cell">
+                                    <strong>Cadena de frío</strong>
+                                </td>
+                                <td>No requerida.</td>
+                                <td>Congelador del hogar.</td>
+                                <td class="highlight-col">
+                                    <strong>Requerida desde la planta hasta el consumidor.</strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="criterio-cell">
+                                    <strong>Costo para el cliente</strong>
+                                </td>
+                                <td>Variable según marca.</td>
+                                <td>Variable según insumos y tiempo invertido.</td>
+                                <td class="highlight-col">
+                                    <strong>Por determinar en el estudio financiero.</strong>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="table-source reveal">
+                    Fuente: Elaboración propia (análisis cualitativo preliminar del documento de propuesta, sujeto a validación en estudios de mercado y financiero).
+                </p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 9: MERCADO OBJETIVO Y COBERTURA GEOGRÁFICA -->
+        <section id="mercado-objetivo" class="section bg-light presentation-slide" data-title="9. Mercado Objetivo y Cobertura">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Segmentación y Canales</span>
+                    <h2 class="section-title">Mercado Objetivo y Estrategia de Cobertura</h2>
+                    <p class="section-subtitle">
+                        Identificación de consumidores finales (B2C) y aliados estratégicos (B2B) en la zona urbana de Neiva, con proyección departamental.
+                    </p>
+                </div>
+
+                <div class="target-market-grid reveal">
+                    <!-- Columna de Segmentos -->
+                    <div class="segments-col">
+                        <div class="segment-box">
+                            <div class="seg-header">
+                                <span class="seg-icon"><i class="ph-duotone ph-heart"></i></span>
+                                <div>
+                                    <h3>Clientes Finales (Consumidores)</h3>
+                                    <span class="seg-sub">Venta directa y modelos de suscripción</span>
+                                </div>
+                            </div>
+                            <ul class="seg-list">
+                                <li><i class="ph-fill ph-check-circle"></i> Tutores de perros y gatos residentes en la zona urbana de Neiva.</li>
+                                <li><i class="ph-fill ph-check-circle"></i> Personas interesadas en alimentación natural y bienestar preventivo.</li>
+                                <li><i class="ph-fill ph-check-circle"></i> Hogares multiespecie (con perros y gatos bajo el mismo techo).</li>
+                                <li><i class="ph-fill ph-check-circle"></i> Hogares con perros de razas pequeñas y medianas (porciones de fácil manejo y almacenamiento).</li>
+                            </ul>
+                        </div>
+
+                        <div class="segment-box">
+                            <div class="seg-header">
+                                <span class="seg-icon"><i class="ph-duotone ph-handshake"></i></span>
+                                <div>
+                                    <h3>Clientes Intermedios (Canales Aliados)</h3>
+                                    <span class="seg-sub">Prescripción profesional y puntos de distribución</span>
+                                </div>
+                            </div>
+                            <div class="b2b-chips">
+                                <div class="b2b-chip"><i class="ph-duotone ph-first-aid"></i> Clínicas veterinarias</div>
+                                <div class="b2b-chip"><i class="ph-duotone ph-storefront"></i> Tiendas de mascotas (Pet Shops)</div>
+                                <div class="b2b-chip"><i class="ph-duotone ph-house"></i> Guarderías y hoteles caninos</div>
+                                <div class="b2b-chip"><i class="ph-duotone ph-certificate"></i> Criadores responsables</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Columna de Mapa Ilustrativo de Neiva y Huila -->
+                    <div class="map-col">
+                        <div class="map-card">
+                            <div class="map-header">
+                                <h4>Cobertura Geográfica Propuesta</h4>
+                                <span class="map-tag">Fase 1: Neiva · Fase 2: Huila</span>
+                            </div>
+                            
+                            <!-- Mapa SVG Ilustrativo del Departamento del Huila y Neiva -->
+                            <div class="huila-map-container">
+                                <svg viewBox="0 0 400 340" class="huila-svg" role="img" aria-label="Mapa ilustrativo de cobertura en Neiva y expansión en Huila">
+                                    <!-- Fondo estilizado -->
+                                    <rect width="400" height="340" rx="16" fill="#EBF3ED"/>
+                                    
+                                    <!-- Silueta estilizada del Departamento del Huila -->
+                                    <path d="M210,30 L265,55 L285,110 L260,165 L235,215 L195,270 L145,305 L115,280 L130,225 L110,175 L140,120 L175,65 Z" 
+                                          fill="#A7C9A5" fill-opacity="0.45" stroke="#397A50" stroke-width="2.5" stroke-linejoin="round"/>
+                                    
+                                    <!-- Río Magdalena (trazo ilustrativo) -->
+                                    <path d="M235,25 Q215,95 205,145 T175,245 T145,315" 
+                                          fill="none" stroke="#64A6BD" stroke-width="3" stroke-dasharray="5,4" opacity="0.7"/>
+
+                                    <!-- Ondas de expansión desde Neiva -->
+                                    <circle cx="212" cy="105" r="55" fill="none" stroke="#397A50" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.6"/>
+                                    <circle cx="212" cy="105" r="95" fill="none" stroke="#174D35" stroke-width="1.2" stroke-dasharray="3,5" opacity="0.4"/>
+
+                                    <!-- Nodo Secundario: Norte (Aipe / Villavieja) -->
+                                    <circle cx="222" cy="62" r="5" fill="#397A50"/>
+                                    <text x="234" y="66" font-size="11" fill="#174D35" font-weight="600">Zona Norte</text>
+
+                                    <!-- Nodo Principal: NEIVA -->
+                                    <circle cx="212" cy="105" r="14" fill="#174D35" fill-opacity="0.2"/>
+                                    <circle cx="212" cy="105" r="7" fill="#174D35" stroke="#FFFFFF" stroke-width="2"/>
+                                    <rect x="226" y="91" width="118" height="28" rx="6" fill="#174D35"/>
+                                    <text x="236" y="109" font-size="12" fill="#FFFFFF" font-weight="700">NEIVA (Fase Inicial)</text>
+
+                                    <!-- Nodos de expansión futura -->
+                                    <circle cx="192" cy="155" r="5" fill="#397A50"/>
+                                    <text x="115" y="159" font-size="11" fill="#174D35" font-weight="600">Centro Huila</text>
+
+                                    <circle cx="165" cy="225" r="5" fill="#397A50"/>
+                                    <text x="85" y="229" font-size="11" fill="#174D35" font-weight="600">Subregión Sur</text>
+
+                                    <!-- Leyenda interna -->
+                                    <g transform="translate(20, 275)">
+                                        <rect width="185" height="48" rx="8" fill="#FFFFFF" fill-opacity="0.9"/>
+                                        <circle cx="16" cy="16" r="5" fill="#174D35"/>
+                                        <text x="28" y="20" font-size="10.5" fill="#1F2933" font-weight="600">Operación inicial: Neiva urbana</text>
+                                        <circle cx="16" cy="34" r="4" fill="#397A50"/>
+                                        <text x="28" y="38" font-size="10.5" fill="#4B5563">Expansión potencial: Huila</text>
+                                    </g>
+                                </svg>
+                            </div>
+
+                            <p class="map-disclaimer">
+                                <i class="ph ph-warning-circle"></i> Mapa esquemático ilustrativo. El tamaño del mercado local, segmentación y frecuencia de compra se estimarán con datos del DANE y encuesta propia; no se cuenta aún con cifras específicas para Neiva.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 10: PROCESO AGROINDUSTRIAL Y MAQUINARIA -->
+        <section id="proceso" class="section bg-white presentation-slide" data-title="10. Proceso Productivo y Maquinaria">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Ingeniería de Procesos</span>
+                    <h2 class="section-title">Flujo Agroindustrial y Equipamiento Técnico</h2>
+                    <p class="section-subtitle">
+                        Secuencia operativa diseñada para preservar la integridad nutricional y garantizar la inocuidad mediante control estricto de temperatura.
+                    </p>
+                </div>
+
+                <div class="process-status-banner reveal">
+                    <i class="ph-fill ph-flask"></i>
+                    <span><strong>Estado de Ingeniería:</strong> Diagrama de proceso conceptual propuesto. La capacidad de planta, tiempos de residencia y balance de línea se definirán en el Estudio Técnico (pendiente de validación técnica).</span>
+                </div>
+
+                <!-- 10 Pasos del Proceso Productivo -->
+                <div class="process-flow-grid reveal">
+                    <div class="process-step">
+                        <span class="step-badge">01</span>
+                        <i class="ph-duotone ph-clipboard-text"></i>
+                        <h4>Recepción y Selección</h4>
+                        <p>Inspección organoléptica, temperatura y trazabilidad de materias primas.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-badge">02</span>
+                        <i class="ph-duotone ph-thermometer-cold"></i>
+                        <h4>Almacenamiento Refrigerado</h4>
+                        <p>Conservación previa de insumos perecederos bajo control térmico.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-badge">03</span>
+                        <i class="ph-duotone ph-knife"></i>
+                        <h4>Preparación y Acondicionamiento</h4>
+                        <p>Limpieza, desinfección de vegetales y adecuación de cortes cárnicos.</p>
+                    </div>
+                    <div class="process-step highlight-step">
+                        <span class="step-badge">04</span>
+                        <i class="ph-duotone ph-gear"></i>
+                        <h4>Molienda</h4>
+                        <p>Trituración homogénea de carnes, vísceras y huesos carnosos.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-badge">05</span>
+                        <i class="ph-duotone ph-blender"></i>
+                        <h4>Mezclado y Formulación</h4>
+                        <p>Integración exacta según receta balanceada por especie y edad.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-badge">06</span>
+                        <i class="ph-duotone ph-scales"></i>
+                        <h4>Porcionado</h4>
+                        <p>Pesaje estandarizado en raciones pequeñas y medianas.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-badge">07</span>
+                        <i class="ph-duotone ph-package"></i>
+                        <h4>Empaque al Vacío</h4>
+                        <p>Extracción de oxígeno y sellado hermético de alta barrera.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-badge">08</span>
+                        <i class="ph-duotone ph-snowflake"></i>
+                        <h4>Congelación</h4>
+                        <p>Abatimiento rápido de temperatura para estabilización microbiológica.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-badge">09</span>
+                        <i class="ph-duotone ph-warehouse"></i>
+                        <h4>Almacenamiento Congelado</h4>
+                        <p>Resguardo de producto terminado en cuarto frío / congeladores.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-badge">10</span>
+                        <i class="ph-duotone ph-truck"></i>
+                        <h4>Distribución en Cadena de Frío</h4>
+                        <p>Entrega manteniendo temperatura controlada hasta el consumidor.</p>
+                    </div>
+                </div>
+
+                <!-- Ficha Técnica Destacada del Molino + Equipos de Referencia -->
+                <div class="machinery-showcase reveal">
+                    <!-- Ficha Técnica del Molino (Exacta según Figura 4 del documento) -->
+                    <div class="molino-tech-card">
+                        <div class="molino-header">
+                            <span class="tech-doc-tag">FICHA TÉCNICA DE REFERENCIA · FIGURA 4</span>
+                            <h3>Molino Eléctrico Industrial para Carne y Comida BARF</h3>
+                            <p>Equipo clave para la molienda de carnes, huesos carnosos y mezclas BARF.</p>
+                        </div>
+
+                        <div class="molino-body">
+                            <div class="molino-visual">
+                                <!-- Ilustración técnica SVG de alta precisión de un molino industrial cabezal #32 -->
+                                <svg viewBox="0 0 260 240" class="molino-svg" aria-label="Ilustración técnica de molino eléctrico industrial">
+                                    <rect width="260" height="240" rx="12" fill="#F4F1E8"/>
+                                    <!-- Estructura metálica -->
+                                    <rect x="55" y="95" width="130" height="115" fill="none" stroke="#174D35" stroke-width="5" rx="4"/>
+                                    <line x1="55" y1="150" x2="185" y2="150" stroke="#174D35" stroke-width="4"/>
+                                    <!-- Motor inferior -->
+                                    <rect x="75" y="162" width="85" height="40" rx="6" fill="#397A50"/>
+                                    <line x1="85" y1="170" x2="150" y2="170" stroke="#A7C9A5" stroke-width="2"/>
+                                    <line x1="85" y1="178" x2="150" y2="178" stroke="#A7C9A5" stroke-width="2"/>
+                                    <line x1="85" y1="186" x2="150" y2="186" stroke="#A7C9A5" stroke-width="2"/>
+                                    <!-- Polea y correa -->
+                                    <circle cx="62" cy="85" r="24" fill="none" stroke="#174D35" stroke-width="4"/>
+                                    <circle cx="62" cy="85" r="6" fill="#174D35"/>
+                                    <line x1="42" y1="95" x2="75" y2="178" stroke="#1F2933" stroke-width="3"/>
+                                    <line x1="82" y1="95" x2="88" y2="170" stroke="#1F2933" stroke-width="3"/>
+                                    <!-- Tolva superior acero -->
+                                    <polygon points="105,40 195,40 180,68 115,68" fill="#CBD5E1" stroke="#475569" stroke-width="2"/>
+                                    <!-- Cabezal N° 32 -->
+                                    <rect x="115" y="68" width="75" height="26" rx="4" fill="#94A3B8" stroke="#334155" stroke-width="2"/>
+                                    <rect x="190" y="64" width="12" height="34" rx="2" fill="#64748B"/>
+                                    <!-- Bandeja receptora -->
+                                    <polygon points="165,112 230,112 222,135 172,135" fill="#397A50" opacity="0.85"/>
+                                    <!-- Empujador -->
+                                    <rect x="215" y="30" width="10" height="42" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="2"/>
+                                </svg>
+                                <span class="molino-caption">Esquema técnico · Cabezal N° 32</span>
+                            </div>
+
+                            <div class="molino-specs-list">
+                                <div class="m-spec">
+                                    <i class="ph-fill ph-check-circle"></i>
+                                    <div>
+                                        <strong>Uso ideal:</strong>
+                                        <span>Molienda de carnes, huesos carnosos y dietas BARF.</span>
+                                    </div>
+                                </div>
+                                <div class="m-spec">
+                                    <i class="ph-fill ph-lightning"></i>
+                                    <div>
+                                        <strong>Motor eléctrico:</strong>
+                                        <span>Monofásico de alta potencia (1.5 – 2 HP).</span>
+                                    </div>
+                                </div>
+                                <div class="m-spec">
+                                    <i class="ph-fill ph-gear-six"></i>
+                                    <div>
+                                        <strong>Cabezal:</strong>
+                                        <span>N° 32 en acero / hierro fundido.</span>
+                                    </div>
+                                </div>
+                                <div class="m-spec">
+                                    <i class="ph-fill ph-arrows-clockwise"></i>
+                                    <div>
+                                        <strong>Transmisión:</strong>
+                                        <span>Polea y correa de alto rendimiento.</span>
+                                    </div>
+                                </div>
+                                <div class="m-spec">
+                                    <i class="ph-fill ph-cube"></i>
+                                    <div>
+                                        <strong>Estructura:</strong>
+                                        <span>Metálica reforzada con pintura electrostática.</span>
+                                    </div>
+                                </div>
+                                <div class="m-spec">
+                                    <i class="ph-fill ph-tray"></i>
+                                    <div>
+                                        <strong>Accesorios incluidos:</strong>
+                                        <span>Bandeja receptora plástica y empujador.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Otros Equipos de Referencia del Estudio Técnico -->
+                    <div class="other-equipment-col">
+                        <h3>Equipamiento Complementario de Planta</h3>
+                        <p class="equip-intro">Referencias tecnológicas contempladas para dimensionar en el estudio técnico:</p>
+                        
+                        <div class="equip-cards-list">
+                            <div class="equip-item">
+                                <div class="equip-icon"><i class="ph-duotone ph-blender"></i></div>
+                                <div>
+                                    <h4>Mezcladora Agroindustrial</h4>
+                                    <p>Homogeneización uniforme de proteínas, vísceras y vegetales sin deterioro térmico.</p>
+                                </div>
+                            </div>
+                            <div class="equip-item">
+                                <div class="equip-icon"><i class="ph-duotone ph-scales"></i></div>
+                                <div>
+                                    <h4>Balanza Industrial de Precisión</h4>
+                                    <p>Control exacto de formulación por lote y estandarización de porciones.</p>
+                                </div>
+                            </div>
+                            <div class="equip-item">
+                                <div class="equip-icon"><i class="ph-duotone ph-seal"></i></div>
+                                <div>
+                                    <h4>Empacadora al Vacío</h4>
+                                    <p>Sellado hermético para extender vida útil y evitar quemaduras por frío.</p>
+                                </div>
+                            </div>
+                            <div class="equip-item">
+                                <div class="equip-icon"><i class="ph-duotone ph-snowflake"></i></div>
+                                <div>
+                                    <h4>Sistema de Congelación y Cuarto Frío</h4>
+                                    <p>Congeladores y almacenamiento térmico continuo para materias primas y producto terminado.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 11: RECURSOS NECESARIOS -->
+        <section id="recursos" class="section bg-light presentation-slide" data-title="11. Recursos para la Formulación">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Soporte Institucional y Técnico</span>
+                    <h2 class="section-title">Recursos Necesarios para la Formulación y Evaluación</h2>
+                    <p class="section-subtitle">
+                        Articulación de talento humano, fuentes institucionales, herramientas analíticas e infraestructura universitaria.
+                    </p>
+                </div>
+
+                <div class="resources-grid reveal">
+                    <div class="resource-card">
+                        <div class="res-icon"><i class="ph-duotone ph-users-three"></i></div>
+                        <h3>1. Recursos Humanos</h3>
+                        <ul>
+                            <li><strong>Equipo formulador:</strong> Estudiante de Ingeniería Agroindustrial (Andrés Suárez Ortega).</li>
+                            <li><strong>Dirección académica:</strong> Docente asesor del curso (Estanislao Rojas Barrera).</li>
+                            <li><strong>Asesoría externa (por solicitar):</strong> Médico veterinario o zootecnista (nutrición), experto en inocuidad y normatividad (ICA) y profesional en finanzas/contabilidad.</li>
+                            <li><strong>Actores clave:</strong> Tutores, comerciantes y veterinarios de Neiva (fuentes primarias).</li>
+                        </ul>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="res-icon"><i class="ph-duotone ph-laptop"></i></div>
+                        <h3>2. Recursos Técnicos</h3>
+                        <ul>
+                            <li><strong>Recolección primaria:</strong> Formularios en línea para encuestas estructuradas a tutores en Neiva.</li>
+                            <li><strong>Modelación financiera:</strong> Hojas de cálculo para flujos de caja, costos, VPN y TIR.</li>
+                            <li><strong>Documentación:</strong> Software de procesamiento de texto y herramientas de presentación ejecutiva.</li>
+                        </ul>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="res-icon"><i class="ph-duotone ph-books"></i></div>
+                        <h3>3. Fuentes de Información</h3>
+                        <ul>
+                            <li><strong>Entidades oficiales:</strong> DANE (estadísticas demográficas y hogares), ICA (normatividad sanitaria) y Cámara de Comercio de Neiva.</li>
+                            <li><strong>Literatura especializada:</strong> Informes sectoriales del mercado de mascotas, artículos científicos y tesis académicas.</li>
+                        </ul>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="res-icon"><i class="ph-duotone ph-factory"></i></div>
+                        <h3>4. Equipos y Maquinaria</h3>
+                        <ul>
+                            <li><strong>Referencias técnicas:</strong> Picadora o molino de carne industrial, mezcladora, balanza industrial, empacadora al vacío, sistema de congelación y cuarto frío.</li>
+                            <li><strong>Alcance:</strong> Cotización y dimensionamiento técnico según capacidad proyectada.</li>
+                        </ul>
+                    </div>
+
+                    <div class="resource-card resource-highlight">
+                        <div class="res-icon"><i class="ph-duotone ph-microscope"></i></div>
+                        <h3>5. Apoyo de Laboratorios</h3>
+                        <ul>
+                            <li><strong>Infraestructura académica:</strong> Laboratorios y acompañamiento técnico de la <strong>Universidad Surcolombiana</strong> (por confirmar disponibilidad y alcance para pruebas o análisis).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 12: CRONOGRAMA (GANTT 8 SEMANAS) -->
+        <section id="cronograma" class="section bg-white presentation-slide" data-title="12. Cronograma de Ejecución (8 Semanas)">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Planificación Temporal</span>
+                    <h2 class="section-title">Cronograma Preliminar de Desarrollo (S1 – S8)</h2>
+                    <p class="section-subtitle">
+                        Secuencia lógica de ocho semanas para ejecutar los estudios de prefactibilidad y la sustentación final. Responsable: <strong>Andrés Suárez Ortega</strong>.
+                    </p>
+                </div>
+
+                <div class="gantt-wrapper reveal">
+                    <div class="gantt-table-container">
+                        <table class="gantt-table">
+                            <thead>
+                                <tr>
+                                    <th class="gantt-task-col">Actividad del Proyecto</th>
+                                    <th>S1</th>
+                                    <th>S2</th>
+                                    <th>S3</th>
+                                    <th>S4</th>
+                                    <th>S5</th>
+                                    <th>S6</th>
+                                    <th>S7</th>
+                                    <th>S8</th>
+                                    <th class="gantt-resp-col">Responsable</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="task-name">
+                                        <span class="task-num">1</span>
+                                        Revisión bibliográfica y ajuste del problema
+                                    </td>
+                                    <td class="active-cell"><div class="gantt-bar start"></div></td>
+                                    <td class="active-cell"><div class="gantt-bar end"></div></td>
+                                    <td></td><td></td><td></td><td></td><td></td><td></td>
+                                    <td class="resp-cell">Andrés Suárez</td>
+                                </tr>
+                                <tr>
+                                    <td class="task-name">
+                                        <span class="task-num">2</span>
+                                        Estudio de mercado (encuestas, entrevistas, competencia)
+                                    </td>
+                                    <td></td>
+                                    <td class="active-cell"><div class="gantt-bar start"></div></td>
+                                    <td class="active-cell"><div class="gantt-bar mid"></div></td>
+                                    <td class="active-cell"><div class="gantt-bar end"></div></td>
+                                    <td></td><td></td><td></td><td></td>
+                                    <td class="resp-cell">Andrés Suárez</td>
+                                </tr>
+                                <tr>
+                                    <td class="task-name">
+                                        <span class="task-num">3</span>
+                                        Estudio técnico (formulación, proceso, capacidad, localización)
+                                    </td>
+                                    <td></td><td></td>
+                                    <td class="active-cell"><div class="gantt-bar start"></div></td>
+                                    <td class="active-cell"><div class="gantt-bar mid"></div></td>
+                                    <td class="active-cell"><div class="gantt-bar end"></div></td>
+                                    <td></td><td></td><td></td>
+                                    <td class="resp-cell">Andrés Suárez</td>
+                                </tr>
+                                <tr>
+                                    <td class="task-name">
+                                        <span class="task-num">4</span>
+                                        Estudio legal, administrativo y ambiental
+                                    </td>
+                                    <td></td><td></td><td></td>
+                                    <td class="active-cell"><div class="gantt-bar start"></div></td>
+                                    <td class="active-cell"><div class="gantt-bar end"></div></td>
+                                    <td></td><td></td><td></td>
+                                    <td class="resp-cell">Andrés Suárez</td>
+                                </tr>
+                                <tr>
+                                    <td class="task-name">
+                                        <span class="task-num">5</span>
+                                        Evaluación financiera (inversión, costos, VPN, TIR)
+                                    </td>
+                                    <td></td><td></td><td></td><td></td>
+                                    <td class="active-cell"><div class="gantt-bar start"></div></td>
+                                    <td class="active-cell"><div class="gantt-bar mid"></div></td>
+                                    <td class="active-cell"><div class="gantt-bar end"></div></td>
+                                    <td></td>
+                                    <td class="resp-cell">Andrés Suárez</td>
+                                </tr>
+                                <tr>
+                                    <td class="task-name">
+                                        <span class="task-num">6</span>
+                                        Análisis de riesgos y conclusiones
+                                    </td>
+                                    <td></td><td></td><td></td><td></td><td></td>
+                                    <td class="active-cell"><div class="gantt-bar start"></div></td>
+                                    <td class="active-cell"><div class="gantt-bar end"></div></td>
+                                    <td></td>
+                                    <td class="resp-cell">Andrés Suárez</td>
+                                </tr>
+                                <tr>
+                                    <td class="task-name">
+                                        <span class="task-num">7</span>
+                                        Documento final y sustentación
+                                    </td>
+                                    <td></td><td></td><td></td><td></td><td></td><td></td>
+                                    <td class="active-cell"><div class="gantt-bar start"></div></td>
+                                    <td class="active-cell"><div class="gantt-bar end"></div></td>
+                                    <td class="resp-cell">Andrés Suárez</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="gantt-footer">
+                        <span><i class="ph-fill ph-calendar-blank"></i> Las semanas (S1 a S8) constituyen una programación preliminar que deberá ajustarse al calendario oficial del curso.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 13: VIABILIDAD Y EVALUACIÓN DEL PROYECTO -->
+        <section id="viabilidad" class="section bg-light presentation-slide" data-title="13. Dimensiones de Viabilidad">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Criterios de Decisión</span>
+                    <h2 class="section-title">Cuatro Dimensiones de Evaluación del Proyecto</h2>
+                    <p class="section-subtitle">
+                        El proyecto determinará objetivamente la conveniencia de invertir mediante el análisis articulado de cuatro viabilidades fundamentales.
+                    </p>
+                </div>
+
+                <div class="viability-grid reveal">
+                    <div class="viability-card">
+                        <div class="v-header">
+                            <span class="v-icon"><i class="ph-duotone ph-chart-pie-slice"></i></span>
+                            <h3>1. Viabilidad de Mercado</h3>
+                        </div>
+                        <p>Validación de la demanda insatisfecha en Neiva, hábitos de alimentación de perros y gatos, disposición real de pago, precios de referencia y estructura de canales comerciales.</p>
+                        <span class="v-status">Por evaluar mediante encuesta y datos DANE</span>
+                    </div>
+
+                    <div class="viability-card">
+                        <div class="v-header">
+                            <span class="v-icon"><i class="ph-duotone ph-wrench"></i></span>
+                            <h3>2. Viabilidad Técnica</h3>
+                        </div>
+                        <p>Definición de recetas balanceadas, estandarización del proceso agroindustrial, tamaño óptimo de planta, macrolocalización y microlocalización, equipos y cadena de frío.</p>
+                        <span class="v-status">Por cuantificar en estudio técnico</span>
+                    </div>
+
+                    <div class="viability-card">
+                        <div class="v-header">
+                            <span class="v-icon"><i class="ph-duotone ph-gavel"></i></span>
+                            <h3>3. Viabilidad Legal</h3>
+                        </div>
+                        <p>Verificación de requisitos sanitarios y regulatorios del <strong>ICA</strong> para alimentos para animales, formalización empresarial, Buenas Prácticas de Manufactura y gestión ambiental.</p>
+                        <span class="v-status">Por verificar normatividad aplicable</span>
+                    </div>
+
+                    <div class="viability-card v-card-finance">
+                        <div class="v-header">
+                            <span class="v-icon"><i class="ph-duotone ph-currency-dollar"></i></span>
+                            <h3>4. Viabilidad Financiera</h3>
+                        </div>
+                        <p>Cuantificación de inversiones iniciales, capital de trabajo, costos fijos y variables, proyección de ingresos y cálculo de indicadores de bondad económica:</p>
+                        <div class="finance-indicators">
+                            <span class="f-pill"><strong>VPN</strong> (Valor Presente Neto)</span>
+                            <span class="f-pill"><strong>TIR</strong> (Tasa Interna de Retorno)</span>
+                            <span class="f-pill"><strong>PRI</strong> (Período de Recuperación)</span>
+                        </div>
+                        <span class="v-status">Indicadores por calcular (rentabilidad aún no determinada)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 14: RIESGOS Y CONSIDERACIONES -->
+        <section id="riesgos" class="section bg-white presentation-slide" data-title="14. Riesgos y Consideraciones">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Gestión Preventiva</span>
+                    <h2 class="section-title">Riesgos Críticos y Consideraciones Técnicas</h2>
+                    <p class="section-subtitle">
+                        La dieta BARF cuenta con defensores y críticos; su viabilidad agroindustrial exige abordar explícitamente los riesgos sanitarios, regulatorios y operativos.
+                    </p>
+                </div>
+
+                <div class="risks-grid reveal">
+                    <div class="risk-item">
+                        <div class="risk-icon"><i class="ph-duotone ph-bug"></i></div>
+                        <div class="risk-body">
+                            <h4>Riesgos Microbiológicos</h4>
+                            <p>Al tratarse de alimento crudo sin cocción térmica, existe riesgo de proliferación bacteriana o parasitaria si no se aplican controles estrictos de higiene y congelación.</p>
+                        </div>
+                    </div>
+
+                    <div class="risk-item">
+                        <div class="risk-icon"><i class="ph-duotone ph-flask"></i></div>
+                        <div class="risk-body">
+                            <h4>Formulación Nutricional Precisa</h4>
+                            <p>Necesidad imprescindible de formular con precisión técnica por especie (perros vs. gatos) y etapa de vida bajo asesoría veterinaria o zootécnica.</p>
+                        </div>
+                    </div>
+
+                    <div class="risk-item">
+                        <div class="risk-icon"><i class="ph-duotone ph-hand-soap"></i></div>
+                        <div class="risk-body">
+                            <h4>Buenas Prácticas de Manufactura (BPM)</h4>
+                            <p>Exigencia de protocolos rigurosos de limpieza, desinfección, trazabilidad de lotes y control de contaminación cruzada en planta.</p>
+                        </div>
+                    </div>
+
+                    <div class="risk-item">
+                        <div class="risk-icon"><i class="ph-duotone ph-thermometer-cold"></i></div>
+                        <div class="risk-body">
+                            <h4>Mantenimiento de la Cadena de Frío</h4>
+                            <p>Vulnerabilidad ante fluctuaciones eléctricas o logísticas; el frío debe asegurarse sin interrupciones desde la producción hasta la entrega en Neiva.</p>
+                        </div>
+                    </div>
+
+                    <div class="risk-item">
+                        <div class="risk-icon"><i class="ph-duotone ph-file-text"></i></div>
+                        <div class="risk-body">
+                            <h4>Requisitos Regulatorios (ICA y Autoridades)</h4>
+                            <p>Cumplimiento de registros, rotulado e inocuidad exigidos por el Instituto Colombiano Agropecuario (ICA) y autoridades sanitarias y ambientales.</p>
+                        </div>
+                    </div>
+
+                    <div class="risk-item">
+                        <div class="risk-icon"><i class="ph-duotone ph-coins"></i></div>
+                        <div class="risk-body">
+                            <h4>Validación de Costos y Materias Primas</h4>
+                            <p>Confirmación de disponibilidad continua, calidad sanitaria y estabilidad de precios de cortes y subproductos cárnicos en la región.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 15: CONCLUSIÓN -->
+        <section id="conclusion" class="section bg-green-gradient text-white presentation-slide" data-title="15. Conclusión de la Propuesta">
+            <div class="container">
+                <div class="conclusion-box reveal">
+                    <span class="section-tag tag-light">Síntesis de la Propuesta</span>
+                    <h2>De una necesidad del hogar a una iniciativa agroindustrial regional</h2>
+                    <p class="conclusion-lead">
+                        El crecimiento sostenido de los hogares con mascotas en Colombia y la búsqueda de una nutrición más natural abren una oportunidad relevante para la Ingeniería Agroindustrial en el Huila.
+                    </p>
+                    <p>
+                        A través de la formulación y evaluación rigurosa de este proyecto de inversión, se busca transformar una hipótesis de demanda insatisfecha en Neiva en una alternativa <strong>formulada profesionalmente, inocua, porcionada, empacada al vacío y respaldada por una cadena de frío confiable</strong>, generando valor agregado sobre las materias primas pecuarias de la región y aportando al bienestar de perros y gatos.
+                    </p>
+                    <div class="conclusion-footer-meta">
+                        <div>
+                            <strong>Andrés Suárez Ortega</strong> · Estudiante de Ingeniería Agroindustrial
+                        </div>
+                        <div>
+                            <strong>Universidad Surcolombiana</strong> · Neiva, Huila · Noviembre de 2026
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 16: BIBLIOGRAFÍA -->
+        <section id="bibliografia" class="section bg-light presentation-slide" data-title="16. Referencias Bibliográficas">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Fuentes Consultadas</span>
+                    <h2 class="section-title">Referencias Bibliográficas</h2>
+                    <p class="section-subtitle">
+                        Fuentes secundarias empleadas para contextualizar el mercado colombiano de mascotas y la alimentación natural BARF.
+                    </p>
+                </div>
+
+                <div class="biblio-list reveal">
+                    <article class="biblio-item">
+                        <span class="biblio-num">01</span>
+                        <div class="biblio-content">
+                            <p><strong>Agronegocios. (s. f.).</strong> <em>El mercado de los alimentos naturales para las mascotas, un sector que está creciendo.</em></p>
+                            <a href="https://www.agronegocios.co/mascotas/el-mercado-de-los-alimentos-naturales-para-las-mascotas-un-sector-que-esta-creciendo-4142605" target="_blank" rel="noopener noreferrer">
+                                https://www.agronegocios.co/mascotas/el-mercado-de-los-alimentos-naturales-para-las-mascotas-un-sector-que-esta-creciendo-4142605 <i class="ph ph-arrow-square-out"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="biblio-item">
+                        <span class="biblio-num">02</span>
+                        <div class="biblio-content">
+                            <p><strong>Cambio Colombia. (s. f.).</strong> <em>La economía de las mascotas: así es el mercado que mueven los perros y gatos en Colombia.</em></p>
+                            <a href="https://cambiocolombia.com/mascotas/economia-mascotas-mercado-perros-gatos-colombia" target="_blank" rel="noopener noreferrer">
+                                https://cambiocolombia.com/mascotas/economia-mascotas-mercado-perros-gatos-colombia <i class="ph ph-arrow-square-out"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="biblio-item">
+                        <span class="biblio-num">03</span>
+                        <div class="biblio-content">
+                            <p><strong>El Colombiano. (2025, 24 de septiembre).</strong> <em>Dos de cada tres hogares colombianos tienen mascota: cuánto gastan y ahorran.</em></p>
+                            <a href="https://www.elcolombiano.com/negocios/dos-de-cada-tres-hogares-colombianos-tienen-mascota-cuanto-gastan-y-ahorran-HO29411402" target="_blank" rel="noopener noreferrer">
+                                https://www.elcolombiano.com/negocios/dos-de-cada-tres-hogares-colombianos-tienen-mascota-cuanto-gastan-y-ahorran-HO29411402 <i class="ph ph-arrow-square-out"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="biblio-item">
+                        <span class="biblio-num">04</span>
+                        <div class="biblio-content">
+                            <p><strong>Kantar. (2024).</strong> <em>El mercado de alimento para mascotas continúa creciendo en Colombia.</em></p>
+                            <a href="https://www.kantar.com/latin-america/inspiracion/consumidor/2024-wp-col-el-mercado-de-alimento-para-mascotas-continua-creciendo" target="_blank" rel="noopener noreferrer">
+                                https://www.kantar.com/latin-america/inspiracion/consumidor/2024-wp-col-el-mercado-de-alimento-para-mascotas-continua-creciendo <i class="ph ph-arrow-square-out"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="biblio-item">
+                        <span class="biblio-num">05</span>
+                        <div class="biblio-content">
+                            <p><strong>Portafolio. (s. f.).</strong> <em>Así cambian los hábitos en la compra de alimentos para mascotas: prefieren las presentaciones pequeñas.</em></p>
+                            <a href="https://www.portafolio.co/negocios/empresas/asi-cambian-los-habitos-en-la-compra-de-alimentos-para-mascotas-prefieren-las-presentaciones-pequenas-489340" target="_blank" rel="noopener noreferrer">
+                                https://www.portafolio.co/negocios/empresas/asi-cambian-los-habitos-en-la-compra-de-alimentos-para-mascotas-prefieren-las-presentaciones-pequenas-489340 <i class="ph ph-arrow-square-out"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="biblio-item">
+                        <span class="biblio-num">06</span>
+                        <div class="biblio-content">
+                            <p><strong>Publimetro. (2025, 22 de enero).</strong> <em>El 86 % de los dueños de mascotas en Colombia prefieren alimentos de Estados Unidos.</em></p>
+                            <a href="https://www.publimetro.co/publipets/2025/01/22/el-86-de-los-duenos-de-mascotas-en-colombia-prefieren-alimentos-de-estados-unidos/" target="_blank" rel="noopener noreferrer">
+                                https://www.publimetro.co/publipets/2025/01/22/el-86-de-los-duenos-de-mascotas-en-colombia-prefieren-alimentos-de-estados-unidos/ <i class="ph ph-arrow-square-out"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="biblio-item">
+                        <span class="biblio-num">07</span>
+                        <div class="biblio-content">
+                            <p><strong>Publimetro. (2026a, 27 de marzo).</strong> <em>Perros y gatos bajo el mismo techo: la mitad de los hogares colombianos con mascotas son multipet.</em></p>
+                            <a href="https://www.publimetro.co/publipets/2026/03/27/perros-y-gatos-bajo-el-mismo-techo-la-mitad-de-los-hogares-colombianos-con-mascotas-son-multipet/" target="_blank" rel="noopener noreferrer">
+                                https://www.publimetro.co/publipets/2026/03/27/perros-y-gatos-bajo-el-mismo-techo-la-mitad-de-los-hogares-colombianos-con-mascotas-son-multipet/ <i class="ph ph-arrow-square-out"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="biblio-item">
+                        <span class="biblio-num">08</span>
+                        <div class="biblio-content">
+                            <p><strong>Publimetro. (2026b, 25 de agosto).</strong> <em>Alimentación cruda para perros y gatos: beneficios, riesgos y guía completa para una dieta BARF segura.</em></p>
+                            <a href="https://www.publimetro.co/publipets/2026/08/25/alimentacion-cruda-para-perros-y-gatos-beneficios-riesgos-y-guia-completa-para-una-dieta-barf-segura/" target="_blank" rel="noopener noreferrer">
+                                https://www.publimetro.co/publipets/2026/08/25/alimentacion-cruda-para-perros-y-gatos-beneficios-riesgos-y-guia-completa-para-una-dieta-barf-segura/ <i class="ph ph-arrow-square-out"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="biblio-item">
+                        <span class="biblio-num">09</span>
+                        <div class="biblio-content">
+                            <p><strong>Vivienda.com.co. (2025).</strong> <em>67 % de los hogares en Colombia conviven con mascotas.</em></p>
+                            <a href="https://vivienda.com.co/?p=1891" target="_blank" rel="noopener noreferrer">
+                                https://vivienda.com.co/?p=1891 <i class="ph ph-arrow-square-out"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Institucional -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="brand-footer-title">
+                    <i class="ph-fill ph-paw-print"></i>
+                    <span>Proyecto de Inversión BARF · Neiva</span>
+                </div>
+                <p>
+                    Propuesta académica formulada en el marco del Reto de Innovación del Programa de Ingeniería Agroindustrial, Facultad de Ingeniería, Universidad Surcolombiana.
+                </p>
+            </div>
+            <div class="footer-meta">
+                <p><strong>Estudiante:</strong> Andrés Suárez Ortega (20252239965)</p>
+                <p><strong>Docente:</strong> Estanislao Rojas Barrera</p>
+                <p><strong>Lugar y Fecha:</strong> Neiva, Huila · Noviembre de 2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante Volver Arriba -->
+    <button class="back-to-top" id="backToTop" title="Volver al inicio" aria-label="Volver al inicio">
+        <i class="ph-bold ph-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
